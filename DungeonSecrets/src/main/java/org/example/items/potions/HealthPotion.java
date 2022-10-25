@@ -8,7 +8,7 @@ import java.util.List;
 public class HealthPotion extends Potion {
 
     Integer healValue;
-    /*
+    /**
      * constructor for Health Potion
      *
      * */
@@ -18,7 +18,7 @@ public class HealthPotion extends Potion {
         super("HealthPotion",1);
         this.healValue = 15;
     }
-    /*
+    /**
     * This method heals up the character if it has any potion then removes it from the inventory
     * @param ch The character that we try to heal up
     * @return -> void

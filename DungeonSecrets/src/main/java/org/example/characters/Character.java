@@ -2,20 +2,21 @@ package org.example.characters;
 
 import org.example.items.Item;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Character {
-    String name;
-    Integer healthPoint;
-    Integer dexterity;
-    Integer mannaPoints;
-    Integer Luck;
-    List<Item> inventory;
-    Boolean isHostile;
+    String name = "";
+    Integer healthPoint = 0;
+    Integer dexterity = 0;
+    Integer mannaPoints = 0;
+    Integer Luck = 0;
+    List<Item> inventory = new ArrayList<>();
+    Boolean isHostile = false;
+    Integer strength = 0;
 
-    Integer strength;
-
-
+    public Character() {
+    }
 
     public Character(String name, Integer healthPoint, Integer dexterity, Integer mannaPoints,
                      Integer luck, List<Item> inventory, Boolean isHostile) {

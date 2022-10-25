@@ -6,6 +6,10 @@ import org.example.items.Item;
 import java.util.List;
 
 public class Warrior extends Character implements CharacterActions {
+
+    public Warrior() {
+    }
+
     public Warrior(String name, Integer healthPoint, Integer dexterity, Integer mannaPoints, Integer luck, List<Item> inventory, Boolean isHostile) {
         super(name, healthPoint, dexterity, mannaPoints, luck, inventory, isHostile);
     }
