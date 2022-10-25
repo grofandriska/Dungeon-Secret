@@ -13,6 +13,10 @@ public abstract class Character {
     List<Item> inventory;
     Boolean isHostile;
 
+    Integer strength;
+
+
+
     public Character(String name, Integer healthPoint, Integer dexterity, Integer mannaPoints,
                      Integer luck, List<Item> inventory, Boolean isHostile) {
         this.name = name;
@@ -35,6 +39,14 @@ public abstract class Character {
                 ", inventory=" + inventory +
                 ", isHostile=" + isHostile +
                 '}';
+    }
+
+    public Integer getStrength() {
+        return strength;
+    }
+
+    public void setStrength(Integer strength) {
+        this.strength = strength;
     }
 
     public String getName() {

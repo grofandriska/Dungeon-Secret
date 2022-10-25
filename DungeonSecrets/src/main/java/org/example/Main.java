@@ -17,7 +17,7 @@ public class Main {
 
 
         Character ch = new Mage("Gandalf",100,3,50,5, inventory,false);
-        item.heal(ch);
+        item.use(ch);
 
         System.out.println(ch.getHealthPoint());
         System.out.println(ch.getInventory());

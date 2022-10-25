@@ -12,6 +12,8 @@ public class HealthPotion extends Potion {
      * constructor for Health Potion
      *
      * */
+
+
     public HealthPotion() {
         super("HealthPotion",1);
         this.healValue = 15;
@@ -21,12 +23,15 @@ public class HealthPotion extends Potion {
     * @param ch The character that we try to heal up
     * @return -> void
     */
-    public void heal(Character ch) {
-        if (ch.getInventory().contains(this) && this.healValue > 0) {
+
+    public void use(Character ch) {
+        if (ch.getInventory().contains(this) && this.healValue > 0 && this.getHitPoint().equals(1)) {
             ch.setHealthPoint(ch.getHealthPoint() + this.healValue);
             this.healValue = 0;
             List<Item> p = ch.getInventory().stream().filter(item -> item.getName().equals("HealthPotion")).toList();
             ch.getInventory().removeAll(p);
+        }else {
+            System.out.println("There are no HealthPotion in your inventory");
         }
     }
 }
