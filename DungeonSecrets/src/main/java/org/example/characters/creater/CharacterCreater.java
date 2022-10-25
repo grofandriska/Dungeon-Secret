@@ -22,6 +22,8 @@ public class CharacterCreater {
         ValuePool = 50;
     }
 
+    /**
+     * This method helps to init the character at the start of the game . We have 50 point for distribution ( for now )*/
     public Character initCharacter() {
         Character character;
         System.out.println(("Choose a type you want to play \n" + "1 -> Warrior \n" + "2-> Archer \n" + "3 -> Mage"));
@@ -43,13 +45,17 @@ public class CharacterCreater {
             System.out.println("Manna:" + character.getMannaPoints());
             System.out.println("1 : health, 2 : Strength , 3 : Dexterity, 4 : Luck , 5 : Manna");
             String s = scanner.nextLine();
-            switch (s) {
-                case "1" -> character.setHealthPoint(character.getHealthPoint() + 1);
-                case "2" -> character.setStrength(character.getStrength() + 1);
-                case "3" -> character.setDexterity(character.getDexterity() + 1);
-                case "4" -> character.setLuck(character.getLuck() + 1);
-                case "5" -> character.setMannaPoints(character.getMannaPoints() + 1);
-            }
+            if (s.equals("1")) {
+                character.setHealthPoint(character.getHealthPoint() + 1);
+            } else if (s.equals("2")) {
+                character.setStrength(character.getStrength() + 1);
+            } else if (s.equals("3")) {
+                character.setDexterity(character.getDexterity() + 1);
+            } else if (s.equals("4")) {
+                character.setLuck(character.getLuck() + 1);
+            } else if (s.equals("5")) {
+                character.setMannaPoints(character.getMannaPoints() + 1);
+            }else {continue;}
             ValuePool-=1;
         }
         return character;
