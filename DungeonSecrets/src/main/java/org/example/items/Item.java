@@ -1,6 +1,6 @@
 package org.example.items;
 
-public class Item {
+public abstract class Item {
     String name;
     Integer hitPoint;
 

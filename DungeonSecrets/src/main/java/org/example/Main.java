@@ -11,7 +11,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        HealthPotion item = new HealthPotion("HP",1,15);
+        HealthPotion item = new HealthPotion();
         List<Item> inventory = new ArrayList<>();
         inventory.add(item);
 
