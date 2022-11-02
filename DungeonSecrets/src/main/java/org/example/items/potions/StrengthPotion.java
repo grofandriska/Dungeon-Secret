@@ -6,14 +6,11 @@ import org.example.items.Item;
 import java.util.List;
 
 public class StrengthPotion extends Potion{
-
     Integer StrengthValue;
-
     public StrengthPotion() {
         super("StrengthPotion", 1);
         this.StrengthValue = 10;
     }
-
     public void use(Character ch){
         if (ch.getInventory().contains(this) && this.getStrengthValue() > 0 && this.getHitPoint().equals(1)) {
             ch.setStrength(ch.getStrength() + this.getStrengthValue());
@@ -24,11 +21,9 @@ public class StrengthPotion extends Potion{
             System.out.println("There are no StrengthPotion in your inventory");
         }
     }
-
     public Integer getStrengthValue() {
         return StrengthValue;
     }
-
     public void setStrengthValue(Integer strengthValue) {
         StrengthValue = strengthValue;
     }
