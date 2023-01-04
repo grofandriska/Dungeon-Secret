@@ -10,9 +10,14 @@ public abstract class Level {
 
     protected List<Character> characterList;
 
+    protected Character player;
+
     protected boolean isVisited;
 
     protected boolean isFinished;
+
+    public Level() {
+    }
 
     public Level(String name, List<Character> characterList, boolean isVisited, boolean isFinished) {
         this.name = name;
@@ -27,6 +32,14 @@ public abstract class Level {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Character getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Character player) {
+        this.player = player;
     }
 
     public List<Character> getCharacterList() {

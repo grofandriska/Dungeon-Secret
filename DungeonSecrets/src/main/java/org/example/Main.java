@@ -13,17 +13,16 @@ public class Main {
     public static void main(String[] args) {
         CharacterCreate create = new CharacterCreate();
 
-        Character mob ;
-        List<Character> mobs = new ArrayList<>();
-        for (int i = 0; i< 10;i++){
-            mob = new Skeleton();
-            mobs.add(mob);
-        }
-        mobs.add(create.initCharacter());
 
-        Level level = new LevelOne(mobs);
+
+        LevelOne level = new LevelOne();
+        level.setPlayer(create.initCharacter());
+        level.ChapterOne();
+        System.out.println(level.getCharacterList());
 
         //TODO : organise every steps into classes and methods to make code more readable -> Game initalizer should create all objects etc...
+
+        //TODO : mobs unique ID and ? name ?
 
 
     }
