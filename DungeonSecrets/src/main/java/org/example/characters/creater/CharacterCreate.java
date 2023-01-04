@@ -8,7 +8,7 @@ import org.example.characters.Warrior;
 import java.util.Scanner;
 
 /**
- * This class will be a builder or abstract factory for create new characters
+ * This class will be a builder or factory for creating new characters
  */
 public class CharacterCreate {
 
@@ -26,7 +26,7 @@ public class CharacterCreate {
     public Character initCharacter() {
         Character character = null;
         while (character == null) {
-        System.out.println(("Choose a type you want to play \n" + "1 -> Warrior \n" + "2-> Archer \n" + "3 -> Mage"));
+        System.out.println(("Choose a type you want to play \n" + "1 -> Warrior \n" + "2 -> Archer \n" + "3 -> Mage"));
         String str = scanner.nextLine();
             if (str.equals("1")) {
                 character = new Warrior();
@@ -36,19 +36,20 @@ public class CharacterCreate {
                 character = new Mage();
             }
         }
-
+        System.out.println("--------------Build Stats--------------------------");
         while (ValuePool > 0) {
             /**This is the main logic and dialog for creating the character
             *
             * */
-            System.out.println("You have got " + ValuePool + "point left to distribute");
-            System.out.println("Please choose an attribute to increase it's value");
-            System.out.println("The stats are Hp:" + character.getHealthPoint());
-            System.out.println("Strength:" + character.getStrength());
-            System.out.println("Dexterity:" + character.getDexterity());
-            System.out.println("Luck:" + character.getLuck());
-            System.out.println("Manna:" + character.getMannaPoints());
-            System.out.println("1 : health, 2 : Strength , 3 : Dexterity, 4 : Luck , 5 : Manna");
+            System.out.println("You have got " + ValuePool + " point(s) left to distribute.");
+            System.out.println();
+            System.out.println("Hp: " + character.getHealthPoint());
+            System.out.println("Strength: " + character.getStrength());
+            System.out.println("Dexterity: " + character.getDexterity());
+            System.out.println("Luck: " + character.getLuck());
+            System.out.println("Manna: " + character.getMannaPoints());
+            System.out.println();
+            System.out.println( "Please choose an attribute to increase it's value !" + "\n" +"1 : health\n2 : Strength\n3 : Dexterity\n4 : Luck\n5 : Manna");
             String s = scanner.nextLine();
 
             /**Here we distribute the point while @param ValuePool is >0*/
@@ -68,6 +69,7 @@ public class CharacterCreate {
             }
             ValuePool -= 1;
         }
+        scanner.close();
         return character;
     }
 }
