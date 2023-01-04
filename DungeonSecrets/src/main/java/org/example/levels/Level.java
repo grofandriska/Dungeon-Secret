@@ -6,6 +6,8 @@ import java.util.List;
 
 public abstract class Level {
 
+    private String playerLocation;
+
     protected String name;
 
     protected List<Character> characterList;
@@ -44,6 +46,14 @@ public abstract class Level {
 
     public List<Character> getCharacterList() {
         return characterList;
+    }
+
+    public String getPlayerLocation() {
+        return playerLocation;
+    }
+
+    public void setPlayerLocation(String playerLocation) {
+        this.playerLocation = playerLocation;
     }
 
     public void setCharacterList(List<Character> characterList) {

@@ -1,6 +1,6 @@
 package org.example.characters;
 
-import org.example.behavour.CharacterActions;
+import org.example.behaviour.CharacterActions;
 import org.example.items.Item;
 
 import java.util.List;

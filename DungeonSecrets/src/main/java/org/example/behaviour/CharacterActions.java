@@ -1,4 +1,4 @@
-package org.example.behavour;
+package org.example.behaviour;
 
 
 /**FYI: All methods are public static final */

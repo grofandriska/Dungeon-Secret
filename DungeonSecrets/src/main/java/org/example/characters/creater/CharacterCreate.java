@@ -69,7 +69,6 @@ public class CharacterCreate {
             }
             ValuePool -= 1;
         }
-        scanner.close();
         return character;
     }
 }
